@@ -58,7 +58,10 @@
 
 #define RGB_DI_PIN PB6
 #define RGBLED_NUM 9
-#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_EFFECT_RGB_TEST
+//#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_LIMIT_VAL 64
+
 // #ifdef RGB_DI_PIN
 //   #define RGBLED_NUM 16
 //   #define RGBLIGHT_HUE_STEP 8
