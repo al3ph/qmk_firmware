@@ -16,55 +16,20 @@
 #include QMK_KEYBOARD_H
 
 enum layers {
-  _BASE = 0,
+  _FN0 = 0,
   _FN1,
   _FN2,
 };
 
-// Defines the keycodes used by our macros in process_record_user
-enum custom_keycodes {
-  QMKBEST = SAFE_RANGE,
-  QMKURL
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-  [_BASE] = LAYOUT_ortho_3x3(
-    KC_PGUP,  KC_HOME,  KC_UP,     \
-    KC_PGDN,  KC_LEFT,  KC_DOWN,   \
-    MO(_FN2), KC_VOLU,  KC_MPLY \
+  [_FN0] = LAYOUT_ortho_3x3(
+  KC_P7,KC_P8,KC_P9,KC_P4,KC_P5,KC_P6,LT(0,KC_P1),LT(1,KC_P2),LT(2,KC_P3)
   ),
   [_FN1] = LAYOUT_ortho_3x3(
-    KC_ESC,   KC_P7,    KC_P8,   \
-    KC_TAB,   KC_P4,    KC_P5,   \
-    KC_ENT,   KC_P1,    KC_P2   \
+  RGB_M_P,RGB_M_B,RGB_M_R,RGB_M_SW,RGB_M_SN,RGB_M_K,LT(0,RGB_M_X),LT(1,RGB_M_G),LT(2,RGB_TOG)
   ),
   [_FN2] = LAYOUT_ortho_3x3(
-    RGB_TOG,  RGB_HUI,  RGB_SAI,  \
-    RGB_MOD,  RGB_HUD,  RGB_SAD,  \
-    _______,  _______,  _______  \
-  )
-
+  RGB_HUI,RGB_SAI,RGB_VAI,RGB_HUD,RGB_SAD,RGB_VAD,LT(0,RGB_SPI),LT(1,RGB_SPD),LT(2,RESET)
+  ),
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case QMKBEST:
-      if (record->event.pressed) {
-        // when keycode QMKBEST is pressed
-        SEND_STRING("QMK is the best thing ever!");
-      } else {
-        // when keycode QMKBEST is released
-      }
-      break;
-    case QMKURL:
-      if (record->event.pressed) {
-        // when keycode QMKURL is pressed
-        SEND_STRING("https://qmk.fm/" SS_TAP(X_ENTER));
-      } else {
-        // when keycode QMKURL is released
-      }
-      break;
-  }
-  return true;
-}
