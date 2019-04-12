@@ -61,7 +61,7 @@
 #define RGB_DI_PIN B6
 #define RGBLED_NUM 9
 #define RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_LIMIT_VAL 64
+#define RGBLIGHT_LIMIT_VAL 128
 
 // #ifdef RGB_DI_PIN
 //   #define RGBLED_NUM 16
