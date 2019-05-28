@@ -18,7 +18,7 @@
 void matrix_init_kb(void) {
   // put your keyboard start-up code here
   // runs once when the firmware starts up
-
+  led_init_ports();
   matrix_init_user();
 }
 
@@ -38,6 +38,15 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 
 void led_set_kb(uint8_t usb_led) {
   // put your keyboard LED indicator (ex: Caps Lock LED) toggling code here
+  if (usb_led & (1<<USB_LED_CAPS_LOCK))
+      PORTE &= ~(1<<2);
+  else
+      PORTE |=  (1<<2);
 
   led_set_user(usb_led);
+}
+
+void led_init_ports(void) {
+    DDRE |= (1<<2);
+    PORTE |= (1<<2);
 }
