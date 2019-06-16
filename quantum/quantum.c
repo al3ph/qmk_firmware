@@ -1234,9 +1234,8 @@ ISR(TIMERx_COMPA_vect) {
 // this one triggers at F_CPU/65536 =~ 244 Hz
 ISR(TIMERx_OVF_vect) {
 #ifdef BACKLIGHT_BREATHING
-  if(is_breathing()) {
-    breathing_task();
-  }
+	if(is_breathing()) 
+  		breathing_task();
 #endif
   // for very small values of OCRxx (or backlight level)
   // we can't guarantee this whole code won't execute
