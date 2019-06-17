@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "Inle.h"
+#include "inle.h"
 #include "quantum/rgb_matrix.h"
 
 led_config_t g_led_config = {
