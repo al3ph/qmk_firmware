@@ -28,24 +28,26 @@ led_config_t g_led_config = {
   },
   {
     // LED Index to Physical Position
-    {   0,   0 }, {  74,   0 }, { 149,   0 }, { 224,   0 },
-    {   0,  15 }, {  74,  15 }, { 149,  15 }, { 224,  15 },
-    {   0,  27 }, {  74,  27 }, { 149,  27 }, { 224,  33 },
-    {   0,  39 }, {  74,  39 }, { 149,  39 },
-    {   0,  51 }, {  74,  51 }, { 149,  51 }, { 224,  57 },
-    {  37,  63 }, { 149,  63 }, 
-    {   0,   0 }, { 224,   0 }, {   0,  64 }, { 224,  64 }
+          /*    0    */ /*    1    */ /*    2    */ /*    3    */
+/*  0 */ {   0,   0 }, {  75,   0 }, { 149,   0 }, { 224,   0 },
+/*  1 */ {   0,  15 }, {  75,  15 }, { 149,  15 }, { 224,  15 },
+/*  2 */ {   0,  27 }, {  75,  27 }, { 149,  27 }, { 224,  34 },
+/*  3 */ {   0,  40 }, {  75,  40 }, { 149,  40 },
+/*  4 */ {   0,  52 }, {  75,  52 }, { 149,  52 }, { 224,  58 },
+/*  5 */ {  37,  64 }, { 149,  64 },
+         {   0,   0 }, { 224,   0 }, {   0,  64 }, { 224,  64 }
+
   },
   {
     // LED Index to Flag
     LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
     LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
     LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
-    LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, 
+    LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
     LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
-    LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, 
+    LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
     LED_FLAG_UNDERGLOW, LED_FLAG_UNDERGLOW, LED_FLAG_UNDERGLOW, LED_FLAG_UNDERGLOW
-  }   
+  }
 };
 
 // Optional override functions below.
