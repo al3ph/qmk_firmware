@@ -49,7 +49,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION COL2ROW
 #define C4_AUDIO
 #define B5_AUDIO
-
+#define AUDIO_CLICKY
 #define RGB_DI_PIN B4
 #define DRIVER_LED_TOTAL 104 // 88 + 16
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS

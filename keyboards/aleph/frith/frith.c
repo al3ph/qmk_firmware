@@ -56,7 +56,7 @@ led_config_t g_led_config = {
   /*  90 */ { 224,   0 }, { 198,   0 }, { 143,   0 }, {  97,   0 }, {  65,   0 },
   /*  95 */ {  26,   0 }, {   0,   0 }, {   3,  27 }, {   2,  64 }, {  18,  64 },
   /* 100 */ {  68,  64 }, { 107,  64 }, { 148,  64 }, { 180,  64 }
-
+  },
   {
     // LED Index to Flag
     _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
@@ -68,6 +68,8 @@ led_config_t g_led_config = {
     _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
     _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
     _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
+    // _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
+    // _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL
     _UL, _UL, _UL, _UL, _UL, _UL, _UL, _UL,
     _UL, _UL, _UL, _UL, _UL, _UL, _UL, _UL
   }
