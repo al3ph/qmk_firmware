@@ -26,7 +26,7 @@ class Key:
         self.y = y
         self.w = w
         self.h = h
-        self.label = safe_str(label)
+        self.label = re.sub(r"(.+)\n.*", r"\1", safe_str(label))
         self.origin = origin if origin else self.ORIGIN_CENTER
 
     @property
