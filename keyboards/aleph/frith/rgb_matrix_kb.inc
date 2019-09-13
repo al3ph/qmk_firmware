@@ -2,12 +2,11 @@ RGB_MATRIX_EFFECT(my_cool_effect)
 
 #ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
-// e.g: A simple effect, self-contained within a single method
-static bool my_cool_effect(effect_params_t* params) {
-  RGB_MATRIX_USE_LIMITS(led_min, led_max);
-  for (uint8_t i = led_min; i < led_max; i++) {
-    rgb_matrix_set_color(i, 0xff, 0xff, 0x00);
-  }
-  return led_max < DRIVER_LED_TOTAL;
+static HSV my_cool_effect_math(HSV hsv, int16_t dx, int16_t dy, uint8_t time) {
+    hsv.h = atan2_8(dy, dx) + time;
+    return hsv;
 }
+
+bool my_cool_effect(effect_params_t* params) { return effect_runner_dx_dy(params, &my_cool_effect_math); }
+
 #endif // RGB_MATRIX_CUSTOM_EFFECT_IMPLS
