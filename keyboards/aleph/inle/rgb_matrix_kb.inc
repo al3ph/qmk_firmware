@@ -12,7 +12,32 @@ HSV VILE[VILE_COUNT] = {
 };
 
 static HSV my_cool_effect_math(HSV hsv, uint8_t i, uint8_t time) {
-    HSV  tmp = VILE[i%VILE_COUNT];
+    HSV tmp;
+
+    switch(i) {
+    	case 7:
+    	case 10:
+    	case 13:
+    	case 15:
+    		tmp = VILE[2];
+    		break; 
+    	case 11:
+    	case 14:
+    	case 16:
+    	case 17:
+    	case 19:
+    		tmp = VILE[1];
+    		break;
+    	case 18:
+    	case 20:
+    		tmp = VILE[0];
+    		break;
+
+    	default:
+    		tmp = VILE[3];
+    		break;
+    }
+
     hsv.v  = scale8(abs8(sin8(time) - 128) * 2, hsv.v);
     hsv.h = tmp.h;
     hsv.s = tmp.s;
