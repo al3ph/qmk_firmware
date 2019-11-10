@@ -78,7 +78,7 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = yes           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 HD44780_ENABLE = no 		# Enable support for HD44780 based LCDs (+400)
-
+DYNAMIC_MACRO_ENABLE = yes
 # RGB_MATRIX_ENABLE = no
 RGB_MATRIX_ENABLE = WS2812
 #RGB_MATRIX_MAXIMUM_BRIGHTNESS = 255
