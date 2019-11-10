@@ -43,6 +43,12 @@ void led_set_kb(uint8_t usb_led) {
   else
       PORTE |=  (1<<2);
 
+  if (IS_LED_ON(usb_led, USB_LED_CAPS_LOCK)) {
+    writePinLow(E2);
+  } else {
+    writePinHigh(E2);
+  }
+
   led_set_user(usb_led);
 }
 
