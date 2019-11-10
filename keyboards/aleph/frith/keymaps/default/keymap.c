@@ -31,6 +31,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 float my_song[][2] = SONG(QWERTY_SOUND);
 float bye_song[][2] = SONG(GOODBYE_SOUND);
 
+void dynamic_macro_record_start_user(void) {
+      PLAY_SONG(my_song);
+
+}
+
+void dynamic_macro_record_end_user(int8_t direction) {
+      PLAY_SONG(bye_song);
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // if (!process_record_dynamic_macro(keycode, record)) {
   //         return false;
