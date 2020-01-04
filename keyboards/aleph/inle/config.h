@@ -66,6 +66,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DISABLE_RGB_MATRIX_CYCLE_OUT_IN_DUAL
 #define DISABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
 #define DISABLE_RGB_MATRIX_DUAL_BEACON
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true
 
 //#define NO_ACTION_TAPPING
 #define NO_ACTION_MACRO
