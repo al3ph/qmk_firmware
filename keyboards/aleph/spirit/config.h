@@ -55,6 +55,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_KEYPRESSES
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_BREATHING
 #define RGB_DISABLE_WHEN_USB_SUSPENDED true
+#define ENCODERS_PAD_A { B6 }
+#define ENCODERS_PAD_B { B7 }
+
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
  */
