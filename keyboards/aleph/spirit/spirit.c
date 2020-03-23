@@ -15,6 +15,7 @@
  */
 #include "spirit.h"
 #include "quantum/rgb_matrix.h"
+
 #define _NL NO_LED
 #define _KL LED_FLAG_KEYLIGHT
 #define _UL LED_FLAG_UNDERGLOW
@@ -31,7 +32,7 @@ led_config_t g_led_config = {
   },
   {
      // #define RGB_MATRIX_CENTER { 112, 32 }
-    // x = 224 / (NUMBER_OF_COLS - 1) * COL_POSITION = 13
+    // x = 224 / (NUMBER_OF_COLS - 1) * COL_POSITION = 13 14 13 14 13 8 28+26+8
     // y =  64 / (NUMBER_OF_ROWS - 1) * ROW_POSITION = 13
     // LED Index to Physical Position
   /*   */ {   0,   0 }, {  16,   0 }, {  32,   0 }, {  48,   0 }, {  64,   0 }, {  80,   0 }, {  96,   0 }, { 112,   0 }, { 128,   0 }, { 144,   0 }, { 160,   0 }, { 176,   0 }, { 192,   0 }, { 216,   0 },
@@ -42,7 +43,7 @@ led_config_t g_led_config = {
   /*   */           
   /*   */ { 224,  48 }, { 224,  32 }, { 224,  16 }, { 224,   0 },
   /*   */ { 179,   0 }, { 134,   0 }, {  89,   0 }, {  44,   0 }, {   0,   0 },
-  /*   */ {   0,  16 }, {   0,  32 }, {   0,  48 }, {   0,  64 },
+  /*   */ {   0,  32 }, {   0,  64 },
   /*   */ {  44,  64 }, {  89,  64 }, { 134,  64 }, { 179,  64 }, { 224,   64}
   },
   {
@@ -53,12 +54,15 @@ led_config_t g_led_config = {
     _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
     _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
     _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL, _KL,
-    _KL,
+    _KL, _KL,
     _UL, _UL, _UL, _UL, _UL, _UL, _UL, _UL,
     _UL, _UL, _UL, _UL, _UL, _UL, _UL, _UL
   }
 };
 
+// void encoder_update_kb(uint8_t index, bool clockwise) {
+//     encoder_update_user(index, clockwise);
+// }
 // Optional override functions below.
 // You can leave any or all of these undefined.
 // These are only required if you want to perform custom actions.
