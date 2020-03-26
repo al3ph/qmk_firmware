@@ -55,9 +55,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_KEYPRESSES
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_BREATHING
 #define RGB_DISABLE_WHEN_USB_SUSPENDED true
-#define ENCODERS_PAD_A { B6 }
-#define ENCODERS_PAD_B { B7 }
-
+#define ENCODERS_PAD_A { B7 }
+#define ENCODERS_PAD_B { B6 }
+//#define ENCODER_DIRECTION_FLIP
+#define ENCODER_RESOLUTION 6
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCING_DELAY 5
 

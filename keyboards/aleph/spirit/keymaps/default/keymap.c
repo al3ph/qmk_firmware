@@ -221,27 +221,27 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     switch(LAYER_current_mode) {
       case _FN:
         if (clockwise) 
-          process_rgb(RGB_RMOD, NULL);
-         else 
           process_rgb(RGB_MOD, NULL);
+         else 
+          process_rgb(RGB_RMOD, NULL);
         break;
       case _KEYB:
         if (clockwise) 
-          process_rgb(RGB_VAD, NULL);
-         else 
           process_rgb(RGB_VAI, NULL);
+         else 
+          process_rgb(RGB_VAD, NULL);
         break;
       case _MISC:
         if (clockwise) 
-          process_rgb(RGB_HUD, NULL);
-         else 
           process_rgb(RGB_HUI, NULL);
+         else 
+          process_rgb(RGB_HUD, NULL);
         break;
     default: //  for any other layers, or the default layer
         if (clockwise) 
-          tap_code(KC_VOLD);
-         else 
           tap_code(KC_VOLU);
+         else 
+          tap_code(KC_VOLD);
         break;
 
     }
